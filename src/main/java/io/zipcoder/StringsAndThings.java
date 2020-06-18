@@ -2,6 +2,8 @@
 package io.zipcoder;
 
 
+import sun.font.FontRunIterator;
+
 /**
  * @author tariq
  */
@@ -16,7 +18,18 @@ public class StringsAndThings {
      * countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input) {
-        return null;
+        int count = 0;
+        if ((input.charAt(input.length()-1) == 'y')||(input.charAt(input.length()-1) == 'z')){
+            count++;
+        }
+        for (int i = 0; i <input.length() ; i++) {
+            if(!Character.isLetter(input.charAt(i))){
+                if ((input.charAt(i-1) == 'y') || (input.charAt(i-1) == 'z')){
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
 
