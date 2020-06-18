@@ -45,7 +45,7 @@ public class StringsAndThings {
      * @return
      */
     public String removeString(String base, String remove) {
-        return null;
+        return base.replaceAll(remove,"");
     }
 
     /**
