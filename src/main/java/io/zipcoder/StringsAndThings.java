@@ -16,17 +16,7 @@ public class StringsAndThings {
      * countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input) {
-        int ctr = 0;
-        for (int i = 0; i < input.length(); i++) {
-            if (input.charAt(i) == 'y' || input.charAt(i) == 'z') {
-
-                if (i < input.length() - 1 && !Character.isLetter(input.charAt(i + 1)))
-                    ctr++;
-                else if (i == input.length() - 1)
-                    ctr++;
-            }
-        }
-        return ctr;
+        return null;
     }
 
 
@@ -42,8 +32,7 @@ public class StringsAndThings {
      * @return
      */
     public String removeString(String base, String remove) {
-        String result = base.replace(remove, "");
-        return result;
+        return null;
     }
 
     /**
@@ -55,14 +44,7 @@ public class StringsAndThings {
      * containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input) {
-        String findIs = "is";
-        String findNot = "not";
-        int is = (input.split(findIs, -1).length - 1);
-        int not = (input.split(findNot, -1).length - 1);
-        if (is == not) {
-            return true;
-        }
-        return false;
+        return null;
     }
 
 
@@ -74,19 +56,7 @@ public class StringsAndThings {
      * gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input) {
-        Boolean happy = false;
-        for (int i = 0; i<input.length()-1; i++) {
-            char tmp = input.charAt(i);
-            if (tmp == 'g' && input.charAt(i + 1) == 'g') {
-                happy = true;
-            }
-            if ((tmp == 'g' && input.charAt(i + 1) != 'g') && input.charAt(i - 1) != 'g')  {
-
-                return false;
-            }
-        }
-
-        return happy;
+        return null;
 
     }
 
@@ -99,13 +69,7 @@ public class StringsAndThings {
      * countTriple("a") // Should return 0
      */
     public Integer countTriple(String input) {
-        int ctr = 0;
-        for (int i = 0; i < input.length() - 2; i++) {
-            char tmp = input.charAt(i);
-            if (tmp == input.charAt(i + 1) && tmp == input.charAt(i + 2))
-                ctr++;
-        }
-        return ctr;
+        return null;
     }
 
 }
